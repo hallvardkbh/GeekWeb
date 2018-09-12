@@ -1,0 +1,21 @@
+[{
+    "gameId": "1",
+    "winner": "Bananas",
+    "players": ["Bananas", "Los Fuegos"]
+  },
+  {
+    "gameId": "2",
+    "winner": "Bananas",
+    "players": ["Bananas", "Los Fuegos"]
+  },
+  {
+    "gameId": "3",
+    "winner": "Bananas",
+    "players": ["Bananas", "Los Fuegos"]
+  },
+  {
+    "gameId": "4",
+    "winner": "Bananas",
+    "players": ["Bananas", "Los Fuegos"]
+  }
+]
