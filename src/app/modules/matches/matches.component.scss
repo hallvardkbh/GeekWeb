@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'Starcraft Normal';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../../assets/fonts/Starcraft_Normal_FF.woff') format('woff');
+}
+
+.matches-container {
+  width: 50vw;
+  margin: auto;
+  overflow: scroll;
+}
+
+// .center-container {
+//   display: flex;
+//   justify-content: center;
+
+//   label {
+//     text-transform: uppercase;
+//     font-family: 'Starcraft Normal', Fallback, sans-serif;
+//     padding: 0 1em;
+//     text-decoration: underline
+//   }
+
+//   span {
+//     // text-transform: uppercase;
+//     font-family: 'Starcraft Normal', Fallback, sans-serif;
+//     padding: 0 1em;
+//   }
+
+// }
+
+// .team {
+//   display: flex;
+//   align-items: center;
+
+//   img {
+//     height: 2em;
+//   }
+// }
+
+// .single-match-container {
+//   display: flex;
+//   justify-content: space-between;
+//   width: 100%;
+//   align-items: center;
+// }

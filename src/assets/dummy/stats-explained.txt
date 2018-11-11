@@ -26,10 +26,10 @@ Vespene Current: 0 / 124,
 
 Vespene Collection Rate: 0 / 67,
 
-Vespene Used Active Forces: 0 / 700,
+Vespene Used Active Forces: 0,
 
-Vespene Used Current Army: 0 / 700,
-Vespene Used Current Economy: 0 / 1675
+Vespene Used Current Army: 0,
+Vespene Used Current Economy: 0,
 Vespene Used Current Technology: 0,
 
 Vespene Used In Progress Army: 0,
@@ -56,14 +56,14 @@ Vespene Killed Economy: 0,
 
 Minerals Current: 1950 / 190,
 
-Minerals Collection Rate: 0 / 699,
+- Minerals Collection Rate: 0 / 699,
 
-Minerals Used Active Forces: 0,
+Minerals Used Active Forces: 0 / 700,
 
-Minerals Used Current Army: 0,
-Minerals Used Current Economy: 0,
+//SPENDING
+Minerals Used Current Army: 0 / 700,
+Minerals Used Current Economy: 0 / 1675,
 Minerals Used Current Technology: 0 / 250,
-
 Minerals Used In Progress Army: 0 / 250,
 Minerals Used In Progress Economy: 0,
 Minerals Used In Progress Technology: 0,
@@ -79,3 +79,9 @@ Minerals Lost Technology: 0,
 Minerals Killed Army: 0,
 Minerals Killed Economy: 0 / 1000,
 Minerals Killed Technology: 0,
+
+Harvested total
+-> Army
+-> 
+
+vespene killed army + minerals killed army = amount killed

@@ -1,3 +1,5 @@
+import { MatchesService } from './../../services/matches.service';
+import { Match } from './../../models/match';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./matches.component.scss']
 })
 export class MatchesComponent implements OnInit {
+  matches: Match[];
 
-  constructor() { }
+  displayedColumns: ['*'];
 
-  ngOnInit() {
+  constructor(private matchService: MatchesService) {
+    this.matchService.handleResult().subscribe(matches => {
+      console.log('Matches:', matches);
+      this.matches = matches;
+    });
   }
 
+  ngOnInit() {}
 }

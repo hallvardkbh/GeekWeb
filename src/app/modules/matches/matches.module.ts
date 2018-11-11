@@ -7,7 +7,7 @@ import {
   MatExpansionModule
 } from '@angular/material';
 @NgModule({
-  imports: [CommonModule],
+  imports: [CommonModule, MatCardModule, MatTableModule],
   declarations: [MatchesComponent]
 })
 export class MatchesModule {}
