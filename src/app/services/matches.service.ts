@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase } from 'angularfire2/database';
+import { AngularFireStorage } from 'angularfire2/storage';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import {
   Match,
-  TeamMatchData,
+  RawTeamMatchData,
   RawMatch,
   MatchTeamStats
 } from '../models/match';
@@ -13,24 +14,51 @@ import {
   providedIn: 'root'
 })
 export class MatchesService {
-  constructor(private db: AngularFireDatabase) {}
+  constructor(
+    private afStorage: AngularFireStorage,
+    private db: AngularFireDatabase
+  ) {}
 
   public handleResult(): Observable<Match[]> {
     return this.db
       .list('/matches')
-      .valueChanges()
-      .pipe(map(matches => this.parseResult(matches)));
+      .snapshotChanges()
+      .pipe(
+        map(actions =>
+          this.parseResult(
+            actions.map(a => {
+              const data = a.payload.val();
+              const id = a.payload.key;
+              return { id, ...data };
+            })
+          )
+        )
+      );
+    // return this.db
+    //   .list('/matches')
+    //   .valueChanges()
+    //   .pipe(map(matches => this.parseResult(matches)));
+  }
+
+  public getReplayDownloadUrl(
+    matchId: string,
+    teamId: number
+  ): Observable<string> {
+    return this.afStorage
+      .ref(`/matches/${matchId}/replay${teamId}.SC2Replay`)
+      .getDownloadURL();
   }
 
   private parseResult(matches: any[]): Match[] {
     const parsedMatches = new Array<Match>();
-    matches.forEach((match: RawMatch) => {
+    matches.forEach((match: any) => {
       const parsedMatch: Match = {
+        id: match.id,
         winner: match.winner,
         record_ok: match.record_ok,
-        stats: [
-          this.toDisplayMatches(match[0]),
-          this.toDisplayMatches(match[1])
+        data: [
+          this.toDisplayMatches(match.data[0]),
+          this.toDisplayMatches(match.data[1])
         ]
       };
       parsedMatches.push(parsedMatch);
@@ -38,9 +66,12 @@ export class MatchesService {
     return parsedMatches;
   }
 
-  private toDisplayMatches(match: TeamMatchData): MatchTeamStats {
+  private toDisplayMatches(match: RawTeamMatchData): MatchTeamStats {
+    if (!match) {
+      return null;
+    }
     const displayMatch: MatchTeamStats = {
-      teamName: match.m_playerId,
+      team_name: match.team_name,
       race: match.race,
       killed:
         match.m_stats.m_scoreValueMineralsKilledArmy +

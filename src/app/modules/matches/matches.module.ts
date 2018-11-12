@@ -4,10 +4,19 @@ import { MatchesComponent } from './matches.component';
 import {
   MatTableModule,
   MatCardModule,
-  MatExpansionModule
+  MatProgressSpinnerModule,
+  MatPaginatorModule,
+  MatIconModule
 } from '@angular/material';
 @NgModule({
-  imports: [CommonModule, MatCardModule, MatTableModule],
+  imports: [
+    CommonModule,
+    MatCardModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatIconModule,
+    MatProgressSpinnerModule
+  ],
   declarations: [MatchesComponent]
 })
 export class MatchesModule {}

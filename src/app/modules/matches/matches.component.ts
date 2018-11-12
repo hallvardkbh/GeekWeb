@@ -1,6 +1,7 @@
 import { MatchesService } from './../../services/matches.service';
 import { Match } from './../../models/match';
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { MatPaginator, MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-matches',
@@ -9,15 +10,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MatchesComponent implements OnInit {
   matches: Match[];
+  dataSource = new MatTableDataSource<Match>();
 
-  displayedColumns: ['*'];
+  displayedColumns: string[] = [
+    'teamName0',
+    'harvested0',
+    'army0',
+    'killed',
+    'army1',
+    'harvested1',
+    'teamName1'
+  ];
 
   constructor(private matchService: MatchesService) {
     this.matchService.handleResult().subscribe(matches => {
       console.log('Matches:', matches);
       this.matches = matches;
+      this.dataSource.data = matches;
     });
   }
 
-  ngOnInit() {}
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  ngOnInit() {
+    this.dataSource.paginator = this.paginator;
+  }
+
+  downloadClicked(matchId: string, teamId: number) {
+    this.matchService.getReplayDownloadUrl(matchId, teamId).subscribe(url => {
+      window.open(url, '_blank');
+    });
+  }
 }

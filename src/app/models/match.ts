@@ -1,11 +1,12 @@
 export interface Match {
+  id: number;
   winner: number;
   record_ok: number;
-  stats: MatchTeamStats[];
+  data: MatchTeamStats[];
 }
 
 export interface MatchTeamStats {
-  teamName: string;
+  team_name: string;
   race: Race;
   killed: number;
   harvested: number[];
@@ -13,25 +14,37 @@ export interface MatchTeamStats {
 }
 
 export enum Race {
-  Terran,
-  Protoss,
+  Terr,
+  Prot,
   Zerg
 }
+
+// export class MatchDisplay {
+//   teamName0: [string, Race];
+//   harvested0: string;
+//   army0: string;
+//   killed: string;
+//   army1: string;
+//   harvested1: string;
+//   teamName1: [string, Race];
+//   constructor(init?: Partial<MatchDisplay>) {
+//     Object.assign(init);
+//   }
+// }
 
 export class RawMatch {
   winner: number;
   record_ok: number;
-  // data: TeamMatchData[];
-  0: TeamMatchData;
-  1: TeamMatchData;
+  data: RawTeamMatchData[];
   constructor(init?: Partial<RawMatch>) {
     Object.assign(init);
   }
 }
 
-export class TeamMatchData {
+export class RawTeamMatchData {
   m_playerId: string;
   repo_name: string;
+  team_name: string;
   race: Race;
   m_stats: {
     m_scoreValueMineralsCurrent: number;
@@ -55,7 +68,7 @@ export class TeamMatchData {
     m_scoreValueVespeneKilledArmy: number;
     m_scoreValueVespeneKilledEconomy: number;
   };
-  constructor(init?: Partial<TeamMatchData>) {
+  constructor(init?: Partial<RawTeamMatchData>) {
     Object.assign(init);
   }
 }

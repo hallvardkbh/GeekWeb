@@ -1,52 +1,117 @@
-<mat-card class="matches-container">
+<div class="matches-container">
 
 
+  <table mat-table *ngIf="dataSource; else loading" [dataSource]="dataSource" class="mat-elevation-z8">
 
+    <ng-container matColumnDef="teamName0">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let match">
+        <div class="team-cont" [ngClass]="{'winner': match.winner === 0, 'tie': match.winner === -1}">
+          <mat-icon (click)="downloadClicked(match.id, 0)">videocam</mat-icon>
+          <img src="../../../assets/images/{{match.data[0].race}}.png">
+          <span>{{match.data[0].team_name}}</span>
+        </div>
+      </td>
+    </ng-container>
 
-  <!---<div class="center-container">
-    <label class="center">harvested</label>
-    <label class="center">army</label>
-    <label class="center">killed</label>
-    <label class="center">army</label>
-    <label class="center">harvested</label>
-  </div>
+    <ng-container matColumnDef="harvested0">
+      <th mat-header-cell *matHeaderCellDef> Harvested </th>
+      <td mat-cell *matCellDef="let match">
+        <div class="dual-cont">
+          <div class="inner-dual-cont">
+            <img src="../../../assets/images/Minerals.gif">
+            <span>{{match.data[0].harvested[0]}}</span>
+          </div>
+          <span>/</span>
+          <div class="inner-dual-cont">
+            <img src="../../../assets/images/Vespene.gif">
+            <span>{{match.data[0].harvested[1]}}</span>
+          </div>
+        </div>
+      </td>
+    </ng-container>
 
+    <ng-container matColumnDef="army0">
+      <th mat-header-cell *matHeaderCellDef> Army </th>
+      <td mat-cell *matCellDef="let match">
+        <div class="dual-cont">
+          <div class="inner-dual-cont">
+            <img src="../../../assets/images/Minerals.gif">
+            <span>{{match.data[0].army[0]}}</span>
+          </div>
+          <span>/</span>
+          <div class="inner-dual-cont">
+            <img src="../../../assets/images/Vespene.gif">
+            <span>{{match.data[0].army[1]}}</span>
+          </div>
+        </div>
+      </td>
+    </ng-container>
 
+    <ng-container matColumnDef="killed">
+      <th mat-header-cell *matHeaderCellDef> Killed </th>
+      <td mat-cell *matCellDef="let match" class="killed-col">
+        <div class="dual-cont kill">
+          <span>{{match.data[0].killed}}</span>
+          <span>-</span>
+          <span>{{match.data[1].killed}}</span>
+        </div>
+      </td>
+    </ng-container>
 
+    <ng-container matColumnDef="army1">
+      <th mat-header-cell *matHeaderCellDef> Army </th>
+      <td mat-cell *matCellDef="let match">
+        <div class="dual-cont">
+          <div class="inner-dual-cont">
+            <img src="../../../assets/images/Minerals.gif">
+            <span>{{match.data[1].army[0]}}</span>
+          </div>
+          <span>/</span>
+          <div class="inner-dual-cont">
+            <img src="../../../assets/images/Vespene.gif">
+            <span>{{match.data[1].army[1]}}</span>
+          </div>
+        </div>
+      </td>
+    </ng-container>
 
-  <div class="single-match-container">
-    <div class="team">
-      <img src="../../../assets/images/zerg.png">
-      <span>Zergboys</span>
-    </div>
-    <div class="center-container">
-      <span>700 | 200</span>
-      <span>700 | 200</span>
-      <span>250 - 0</span>
-      <span>700 | 200</span>
-      <span>700 | 200</span>
-    </div>
-    <div class="team">
-      <span>Zergboys</span>
-      <img src="../../../assets/images/terran.png">
-    </div>
-  </div>
-  <div class="single-match-container">
-    <div class="team">
-      <img src="../../../assets/images/zerg.png">
-      <span>Proton</span>
-    </div>
-    <div class="center-container">
-      <span>700 | 200</span>
-      <span>700 | 200</span>
-      <span>250 - 0</span>
-      <span>700 | 200</span>
-      <span>700 | 200</span>
-    </div>
-    <div class="team">
-      <span>Zergboys</span>
-      <img src="../../../assets/images/terran.png">
-    </div>
-  </div> -->
+    <ng-container matColumnDef="harvested1">
+      <th mat-header-cell *matHeaderCellDef> Harvested </th>
+      <td mat-cell *matCellDef="let match">
+        <div class="dual-cont">
+          <div class="inner-dual-cont">
+            <img src="../../../assets/images/Minerals.gif">
+            <span>{{match.data[1].harvested[0]}}</span>
+          </div>
+          <span>/</span>
+          <div class="inner-dual-cont">
+            <img src="../../../assets/images/Vespene.gif">
+            <span>{{match.data[1].harvested[1]}}</span>
+          </div>
+        </div>
+      </td>
+    </ng-container>
 
-</mat-card>
+    <ng-container matColumnDef="teamName1">
+      <th mat-header-cell *matHeaderCellDef></th>
+      <td mat-cell *matCellDef="let match">
+        <div class="team-cont" [ngClass]="{'winner': match.winner === 1, 'tie': match.winner === -1 }">
+          <span>{{match.data[1].team_name}}</span>
+          <img src="../../../assets/images/{{match.data[1].race}}.png">
+          <mat-icon (click)="downloadClicked(match.id, 1)">videocam</mat-icon>
+        </div>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 50, 100]" showFirstLastButtons></mat-paginator>
+
+</div>
+
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>

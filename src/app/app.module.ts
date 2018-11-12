@@ -3,6 +3,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '../../node_modules/@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
@@ -19,6 +20,7 @@ import { environment } from '../environments/environment';
     MatchesModule,
     StandingsModule,
     AngularFireDatabaseModule,
+    AngularFireStorageModule,
     HomeModule,
     BrowserAnimationsModule,
     HttpClientModule,

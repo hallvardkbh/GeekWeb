@@ -1,3 +1,5 @@
+@import "src/assets/styles/_variables.scss";
+
 @font-face {
   font-family: 'Starcraft Normal';
   font-style: normal;
@@ -6,9 +8,88 @@
 }
 
 .matches-container {
-  width: 50vw;
+  width: 65vw;
   margin: auto;
-  overflow: scroll;
+  height: 65vh;
+  overflow: auto;
+
+  .mat-table {
+    width: 100%;
+
+    .killed-col {
+      font-weight: bold;
+      box-shadow: $vip-box-shadow;
+    }
+
+    td.mat-cell .dual-cont {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.kill {
+        justify-content: space-evenly;
+      }
+
+      .inner-dual-cont {
+        display: flex;
+        align-items: center;
+
+        img {
+          padding-right: 0.2em;
+        }
+      }
+    }
+
+    td.mat-cell .team-cont {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &.winner {
+        box-shadow: $vip-box-shadow;
+        border-width: 2px;
+        border-style: solid;
+        border-color: $primary-golden;
+        background-color: $secondary-golden
+      }
+
+      &.tie {
+        border-width: 2px;
+        border-style: dotted;
+        border-color: $common-gray;
+      }
+
+      img {
+        padding: 0 1em;
+        height: 2em;
+      }
+
+      mat-icon {
+        color: $common-gray;
+
+        &:hover {
+          color: $primary-golden;
+          cursor: pointer;
+        }
+      }
+    }
+
+    th.mat-header-cell,
+    td.mat-cell {
+      text-align: center;
+      border: 0;
+    }
+
+    th.mat-header-cell {
+      text-transform: uppercase;
+      font-family: 'Starcraft Normal', Fallback, sans-serif;
+      font-size: 1rem;
+      color: black;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: $common-gray;
+    }
+  }
 }
 
 // .center-container {
