@@ -24,7 +24,7 @@ export class MatchesComponent implements OnInit {
 
   constructor(private matchService: MatchesService) {
     this.matchService.handleResult().subscribe(matches => {
-      console.log('Matches:', matches);
+      matches.reverse();
       this.matches = matches;
       this.dataSource.data = matches;
     });

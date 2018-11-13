@@ -1,10 +1,41 @@
+@import "src/assets/styles/_variables.scss";
+
+@font-face {
+  font-family: 'Starcraft Normal';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../../assets/fonts/Starcraft_Normal_FF.woff') format('woff');
+}
+
 .table {
-  max-width: 40%;
-  padding: 15px;
-  min-width: 500px;
+  max-width: 40vw;
   margin: auto;
+  height: 65vh;
+  padding: 1em 0;
+  overflow: auto;
 
   table {
-    width: 100%
+    width: 100%;
+
+    td.mat-cell .team-cont {
+      display: flex;
+      align-items: center;
+
+      img {
+        padding: 0 0.2em;
+        height: 2em;
+      }
+    }
+
+
+    th.mat-header-cell {
+      text-transform: uppercase;
+      font-family: 'Starcraft Normal', Fallback, sans-serif;
+      font-size: 1rem;
+      color: black;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: $common-gray;
+    }
   }
 }

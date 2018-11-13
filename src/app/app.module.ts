@@ -11,6 +11,7 @@ import { HomeModule } from './modules/home/home.module';
 import { StandingsModule } from './modules/standings/standings.module';
 import { MatchesModule } from './modules/matches/matches.module';
 import { environment } from '../environments/environment';
+import { InfoModule } from './modules/info/info.module';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { environment } from '../environments/environment';
     BrowserModule,
     AppRoutingModule,
     MatchesModule,
+    InfoModule,
     StandingsModule,
     AngularFireDatabaseModule,
     AngularFireStorageModule,
