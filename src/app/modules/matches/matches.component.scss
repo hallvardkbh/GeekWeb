@@ -18,13 +18,11 @@
 }
 
 .matches-container {
-  max-width: 75vw;
+  max-width: 85vw;
   margin: auto;
-  padding: 1em 0;
-  height: 65vh;
+  height: 100%;
   overflow: auto;
   width: max-content;
-
 
   .mat-paginator {
     width: 100%;
@@ -32,11 +30,15 @@
 
   .mat-table {
 
-    min-width: 65vw;
+    min-width: 80vw;
 
     .killed-col {
       font-weight: bold;
       box-shadow: $vip-box-shadow;
+    }
+
+    td.mat-cell {
+      font-size: 16px;
     }
 
     td.mat-cell .dual-cont {

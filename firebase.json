@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/GeekWeb",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
