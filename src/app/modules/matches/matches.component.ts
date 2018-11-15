@@ -19,14 +19,15 @@ export class MatchesComponent implements OnInit {
     'killed',
     'army1',
     'harvested1',
-    'teamName1'
+    'teamName1',
+    'downloads'
   ];
 
   constructor(private matchService: MatchesService) {
     this.matchService.handleResult().subscribe(matches => {
-      matches = matches.reverse();
       console.log(matches);
 
+      matches = matches.reverse();
       this.matches = matches;
       this.dataSource.data = matches;
     });
@@ -38,8 +39,14 @@ export class MatchesComponent implements OnInit {
     this.dataSource.paginator = this.paginator;
   }
 
-  downloadClicked(matchId: string, teamId: number) {
+  downloadReplayClicked(matchId: string, teamId: number) {
     this.matchService.getReplayDownloadUrl(matchId, teamId).subscribe(url => {
+      window.open(url, '_blank');
+    });
+  }
+
+  downloadStatsClicked(matchId: string) {
+    this.matchService.getStatsDownloadUrl(matchId).subscribe(url => {
       window.open(url, '_blank');
     });
   }

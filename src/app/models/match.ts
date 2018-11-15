@@ -57,6 +57,9 @@ export class RawTeamMatchData {
     m_scoreValueMineralsKilledTechnology: number;
     m_scoreValueMineralsKilledArmy: number;
     m_scoreValueMineralsKilledEconomy: number;
+    m_scoreValueMineralsLostTechnology: number;
+    m_scoreValueMineralsLostArmy: number;
+    m_scoreValueMineralsLostEconomy: number;
     m_scoreValueVespeneCurrent: number;
     m_scoreValueVespeneUsedCurrentEconomy: number;
     m_scoreValueVespeneUsedCurrentArmy: number;
@@ -67,6 +70,9 @@ export class RawTeamMatchData {
     m_scoreValueVespeneKilledTechnology: number;
     m_scoreValueVespeneKilledArmy: number;
     m_scoreValueVespeneKilledEconomy: number;
+    m_scoreValueVespeneLostTechnology: number;
+    m_scoreValueVespeneLostArmy: number;
+    m_scoreValueVespeneLostEconomy: number;
   };
   constructor(init?: Partial<RawTeamMatchData>) {
     Object.assign(init);

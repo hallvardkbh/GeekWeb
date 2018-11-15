@@ -7,24 +7,7 @@
   src: url('../../../assets/fonts/Starcraft_Normal_FF.woff') format('woff');
 }
 
-button {
-  min-width: 30vw;
-  min-height: 25%;
-  color: $primary-golden;
-  padding: 1rem;
-  outline: none;
-  cursor: pointer;
-  background-color: transparent;
-  border-style: solid;
-  border-width: 0.15rem;
-  font-family: 'Starcraft Normal', Fallback, sans-serif;
-  font-size: $big-button-font-size;
-  border-color: $button-border;
 
-  &:hover {
-    background-color: $secondary-golden
-  }
-}
 
 .cont-buttons {
   display: flex;
@@ -33,4 +16,24 @@ button {
   height: 100%;
   align-items: center;
   justify-content: space-around;
+
+
+  button {
+    min-width: 30vw;
+    min-height: 25%;
+    color: $primary-golden;
+    padding: 1rem;
+    outline: none;
+    cursor: pointer;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0.15rem;
+    font-family: 'Starcraft Normal', Fallback, sans-serif;
+    font-size: $big-button-font-size;
+    border-color: $button-border;
+
+    &:hover {
+      background-color: $secondary-golden
+    }
+  }
 }
