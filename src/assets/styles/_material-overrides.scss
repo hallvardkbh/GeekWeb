@@ -1,0 +1,22 @@
+@font-face {
+  font-family: 'Starcraft Normal';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/fonts/Starcraft_Normal_FF.woff') format('woff')
+}
+
+
+.mat-tab-label {
+  width: 100%;
+  text-transform: uppercase;
+  font-family: 'Starcraft Normal', Fallback, sans-serif;
+  font-size: 1.5em;
+  color: black;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: $common-gray;
+}
+
+.mat-tab-body-wrapper {
+  height: 100%;
+}

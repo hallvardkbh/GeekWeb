@@ -7,15 +7,44 @@
   src: url('../../../assets/fonts/Starcraft_Normal_FF.woff') format('woff');
 }
 
-.table {
-  max-width: 40vw;
+.round {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  flex-wrap: wrap-reverse;
+}
+
+.final {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+  flex-wrap: wrap-reverse;
+}
+
+table {
+  min-width: 24%;
+  padding: 0 1em;
+
+  &:last-child {
+    margin-top: 1em;
+    border-style: solid;
+    border-width: 0.15rem;
+    border-color: $button-border;
+  }
+}
+
+.table-cont {
+  height: 100%;
+  max-width: 85vw;
   margin: auto;
-  height: 65vh;
-  padding: 1em 0;
   overflow: auto;
 
+  .tabz {
+    background-color: white;
+    height: inherit;
+  }
+
   table {
-    width: 100%;
 
     td.mat-cell .team-cont {
       display: flex;
