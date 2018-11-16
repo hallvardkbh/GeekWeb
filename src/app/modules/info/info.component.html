@@ -1,5 +1,5 @@
 <div class="pdf-cont">
-  <div class="but-cont" *ngFor="let fileName of fileNames">
-    <button mat-button (click)="downloadClicked(fileName)">{{fileName}}</button>
-  </div>
+  <!-- <div class="but-cont" *ngFor="let fileName of fileNames"> -->
+  <button mat-button *ngFor="let fileName of fileNames" (click)="downloadClicked(fileName)">{{fileName}}</button>
+  <!-- </div> -->
 </div>

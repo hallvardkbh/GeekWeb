@@ -9,26 +9,47 @@
 
 
 
+
 .cont-buttons {
   display: flex;
   margin: auto;
   width: 100%;
   height: 100%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 
+  @media screen and (min-width: 1400px) {
+    flex-direction: row;
+  }
+
+  @media screen and (max-width: 1400px) {
+    flex-direction: column;
+  }
 
   button {
-    min-width: 30vw;
+    overflow: hidden;
     min-height: 25%;
     color: $primary-golden;
     padding: 1rem;
+
+    @media (max-width: 1400px) {
+      min-width: 80%;
+    }
+
+    @media (min-width: 1401px) {
+      min-width: 30%;
+    }
+
+    text-align: center;
     outline: none;
     cursor: pointer;
     background-color: $misty-background;
     border-style: solid;
     border-width: 0.15rem;
-    font-family: 'Starcraft Normal', Fallback, sans-serif;
+    font-family: 'Starcraft Normal',
+    Fallback,
+    sans-serif;
     font-size: $big-button-font-size;
     border-color: $button-border;
 
