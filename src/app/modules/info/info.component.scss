@@ -20,14 +20,26 @@
 
   button {
     min-height: 7rem;
-    width: inherit;
+
+    @media (max-width: 1400px) {
+      min-width: 80%;
+      font-size: 4vw;
+    }
+
+    @media (min-width: 1400px) {
+      min-width: 30%;
+      font-size: 4vw;
+    }
+
     color: $primary-golden;
     background-color: $misty-background;
     outline: none;
     cursor: pointer;
     border-style: solid;
     border-width: 0.15rem;
-    font-family: 'Starcraft Normal', Fallback, sans-serif;
+    font-family: 'Starcraft Normal',
+    Fallback,
+    sans-serif;
     font-size: $big-button-font-size;
     border-color: $button-border;
 
