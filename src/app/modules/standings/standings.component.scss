@@ -21,17 +21,6 @@
   flex-wrap: wrap-reverse;
 }
 
-table {
-  min-width: 24%;
-  padding: 0 1em;
-
-  &:last-child {
-    margin-top: 1em;
-    border-style: solid;
-    border-width: 0.15rem;
-    border-color: $button-border;
-  }
-}
 
 .table-cont {
   height: 100%;
@@ -40,11 +29,18 @@ table {
   overflow: auto;
 
   .tabz {
-    background-color: white;
+    background-color: transparent;
     height: inherit;
   }
 
   table {
+
+    min-width: 27%;
+    background-color: $misty-background;
+
+    td.mat-cell {
+      font-size: 16px,
+    }
 
     td.mat-cell .team-cont {
       display: flex;
@@ -56,15 +52,27 @@ table {
       }
     }
 
+    .mat-cell,
+    .mat-header-cell {
+      color: white;
+    }
+
+    &:last-child {
+      margin-top: 1em;
+      border-style: solid;
+      border-width: 0.15rem;
+      border-color: $button-border;
+    }
+
 
     th.mat-header-cell {
       text-transform: uppercase;
       font-family: 'Starcraft Normal', Fallback, sans-serif;
       font-size: 1rem;
-      color: black;
+      color: white;
       border-bottom-width: 1px;
       border-bottom-style: solid;
-      border-bottom-color: $common-gray;
+      border-bottom-color: white;
     }
   }
 }

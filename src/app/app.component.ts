@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { GameDataService } from './game-data.service';
 
 @Component({
   selector: 'app-root',

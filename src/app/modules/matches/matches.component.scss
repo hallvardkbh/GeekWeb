@@ -31,10 +31,11 @@
   .mat-table {
 
     min-width: 80vw;
+    background-color: $misty-background;
 
     .killed-col {
       font-weight: bold;
-      box-shadow: $vip-box-shadow;
+      box-shadow: $kill-box-shadow;
     }
 
     td.mat-cell {
@@ -98,13 +99,13 @@
     td.mat-cell {
       text-align: center;
       border: 0;
+      color: white;
     }
 
     th.mat-header-cell {
       text-transform: uppercase;
       font-family: 'Starcraft Normal', Fallback, sans-serif;
       font-size: 1rem;
-      color: black;
       border-bottom-width: 1px;
       border-bottom-style: solid;
       border-bottom-color: $common-gray;

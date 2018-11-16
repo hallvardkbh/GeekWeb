@@ -1,3 +1,12 @@
+@import "src/assets/styles/_variables.scss";
+
+@font-face {
+  font-family: 'Starcraft Normal';
+  font-style: normal;
+  font-weight: normal;
+  src: url('/assets/fonts/Starcraft_Normal_FF.woff') format('woff');
+}
+
 .page {
   background-image: url(../assets/images/sc2-background.jpg);
   background-size: cover;
@@ -12,8 +21,10 @@
 
   // display: flex;
   .current-time {
-    font-size: 5rem;
-    color: white;
+    // font-size: 5rem;
+    font-family: 'Starcraft Normal', Fallback, sans-serif;
+    font-size: $big-button-font-size;
+    color: $button-border;
     padding: 1rem;
   }
 
