@@ -13,7 +13,6 @@ export class StandingsComponent {
 
   constructor(private standingsService: StandingsService) {
     this.standingsService.handleResult().subscribe(rounds => {
-      rounds[0]['teams'] = _.orderBy(rounds[0]['teams'], ['position'], ['asc']);
       rounds[3]['teams'] = _.orderBy(rounds[3]['teams'], ['position'], ['asc']);
       this.standings = rounds;
     });
