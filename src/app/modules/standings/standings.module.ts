@@ -5,12 +5,14 @@ import {
   MatTableModule,
   MatCardModule,
   MatTabsModule,
-  MatProgressSpinnerModule
+  MatProgressSpinnerModule,
+  MatSortModule
 } from '@angular/material';
 @NgModule({
   imports: [
     CommonModule,
     MatTableModule,
+    MatSortModule,
     MatTabsModule,
     MatCardModule,
     MatProgressSpinnerModule

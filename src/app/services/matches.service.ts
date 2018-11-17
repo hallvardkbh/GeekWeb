@@ -70,42 +70,47 @@ export class MatchesService {
     const displayMatch: MatchTeamStats = {
       team_name: match.team_name,
       race: match.race,
-      killed:
-        match.m_stats.m_scoreValueMineralsKilledArmy +
-        match.m_stats.m_scoreValueMineralsKilledEconomy +
-        match.m_stats.m_scoreValueMineralsKilledTechnology +
-        match.m_stats.m_scoreValueVespeneKilledArmy +
-        match.m_stats.m_scoreValueVespeneKilledEconomy +
-        match.m_stats.m_scoreValueVespeneKilledTechnology,
-      harvested: [
-        match.m_stats.m_scoreValueMineralsUsedCurrentArmy +
-          match.m_stats.m_scoreValueMineralsUsedCurrentEconomy +
-          match.m_stats.m_scoreValueMineralsUsedCurrentTechnology +
-          match.m_stats.m_scoreValueMineralsUsedInProgressArmy +
-          match.m_stats.m_scoreValueMineralsUsedInProgressEconomy +
-          match.m_stats.m_scoreValueMineralsUsedInProgressTechnology +
-          match.m_stats.m_scoreValueMineralsCurrent +
-          match.m_stats.m_scoreValueMineralsLostArmy +
-          match.m_stats.m_scoreValueMineralsLostEconomy +
-          match.m_stats.m_scoreValueMineralsLostTechnology -
-          1000,
-        match.m_stats.m_scoreValueVespeneUsedCurrentArmy +
-          match.m_stats.m_scoreValueVespeneUsedCurrentEconomy +
-          match.m_stats.m_scoreValueVespeneUsedCurrentTechnology +
-          match.m_stats.m_scoreValueVespeneUsedInProgressArmy +
-          match.m_stats.m_scoreValueVespeneUsedInProgressEconomy +
-          match.m_stats.m_scoreValueVespeneUsedInProgressTechnology +
-          match.m_stats.m_scoreValueVespeneCurrent +
-          match.m_stats.m_scoreValueVespeneLostArmy +
-          match.m_stats.m_scoreValueVespeneLostEconomy +
-          match.m_stats.m_scoreValueVespeneLostTechnology
-      ],
-      army: [
-        match.m_stats.m_scoreValueMineralsUsedInProgressArmy +
-          match.m_stats.m_scoreValueMineralsUsedCurrentArmy,
-        match.m_stats.m_scoreValueVespeneUsedCurrentArmy +
-          match.m_stats.m_scoreValueVespeneUsedInProgressArmy
-      ]
+      killed: match.m_stats
+        ? match.m_stats.m_scoreValueMineralsKilledArmy +
+          match.m_stats.m_scoreValueMineralsKilledEconomy +
+          match.m_stats.m_scoreValueMineralsKilledTechnology +
+          match.m_stats.m_scoreValueVespeneKilledArmy +
+          match.m_stats.m_scoreValueVespeneKilledEconomy +
+          match.m_stats.m_scoreValueVespeneKilledTechnology
+        : 0,
+      harvested: match.m_stats
+        ? [
+            match.m_stats.m_scoreValueMineralsUsedCurrentArmy +
+              match.m_stats.m_scoreValueMineralsUsedCurrentEconomy +
+              match.m_stats.m_scoreValueMineralsUsedCurrentTechnology +
+              match.m_stats.m_scoreValueMineralsUsedInProgressArmy +
+              match.m_stats.m_scoreValueMineralsUsedInProgressEconomy +
+              match.m_stats.m_scoreValueMineralsUsedInProgressTechnology +
+              match.m_stats.m_scoreValueMineralsCurrent +
+              match.m_stats.m_scoreValueMineralsLostArmy +
+              match.m_stats.m_scoreValueMineralsLostEconomy +
+              match.m_stats.m_scoreValueMineralsLostTechnology -
+              1000,
+            match.m_stats.m_scoreValueVespeneUsedCurrentArmy +
+              match.m_stats.m_scoreValueVespeneUsedCurrentEconomy +
+              match.m_stats.m_scoreValueVespeneUsedCurrentTechnology +
+              match.m_stats.m_scoreValueVespeneUsedInProgressArmy +
+              match.m_stats.m_scoreValueVespeneUsedInProgressEconomy +
+              match.m_stats.m_scoreValueVespeneUsedInProgressTechnology +
+              match.m_stats.m_scoreValueVespeneCurrent +
+              match.m_stats.m_scoreValueVespeneLostArmy +
+              match.m_stats.m_scoreValueVespeneLostEconomy +
+              match.m_stats.m_scoreValueVespeneLostTechnology
+          ]
+        : [0, 0],
+      army: match.m_stats
+        ? [
+            match.m_stats.m_scoreValueMineralsUsedInProgressArmy +
+              match.m_stats.m_scoreValueMineralsUsedCurrentArmy,
+            match.m_stats.m_scoreValueVespeneUsedCurrentArmy +
+              match.m_stats.m_scoreValueVespeneUsedInProgressArmy
+          ]
+        : [0, 0]
     };
 
     return displayMatch;

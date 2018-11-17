@@ -2,6 +2,7 @@ export class Rounds {
   round1: Teams;
   round2: Teams;
   final: Team[];
+  total: Team[];
   constructor(init?: Partial<Rounds>) {
     Object.assign(init);
   }
