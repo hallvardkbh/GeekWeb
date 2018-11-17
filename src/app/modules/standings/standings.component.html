@@ -72,6 +72,27 @@
         </table>
       </div>
     </mat-tab>
+    <mat-tab label="Total">
+      <div class="final">
+        <table mat-table [dataSource]="standings[3].teams">
+          <ng-container matColumnDef="position">
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+          <ng-container matColumnDef="team">
+            <td mat-cell *matCellDef="let element">
+              <div class="team-cont">
+                <span>{{element.name}}</span>
+                <img src="../../../assets/images/{{element.race}}.png">
+              </div>
+            </td>
+          </ng-container>
+          <ng-container matColumnDef="score">
+            <td mat-cell *matCellDef="let element"> {{element.score}} </td>
+          </ng-container>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </mat-tab>
   </mat-tab-group>
 </div>
 
