@@ -2,82 +2,82 @@
   "round1": {
     "teams": [
       [{
+        "name": "Hoegrinders",
         "position": 1,
         "race": "Zerg",
-        "name": "Team 1",
-        "score": 0
+        "score": 6
       }, {
+        "name": "Feminine entomologer fra Raufoss",
         "position": 2,
         "race": "Zerg",
-        "name": "Team 2",
-        "score": 0
+        "score": 6
       }, {
+        "name": "Gladiators",
         "position": 3,
         "race": "Zerg",
-        "name": "Team 3",
-        "score": 0
+        "score": 5
       }, {
+        "name": "Ekle insekter",
         "position": 4,
         "race": "Zerg",
-        "name": "Team 4",
+        "score": 1
+      }],
+      [{
+        "name": "Carriers",
+        "position": 1,
+        "race": "Prot",
+        "score": 7
+      }, {
+        "name": "All your base are belong to us",
+        "position": 2,
+        "race": "Prot",
+        "score": 6
+      }, {
+        "name": "Do you have a cup of pylons?",
+        "position": 3,
+        "race": "Prot",
+        "score": 3
+      }, {
+        "name": "Big Daddies",
+        "position": 4,
+        "race": "Prot",
+        "score": 1
+      }],
+      [{
+        "name": "Liggeunderlaget",
+        "position": 1,
+        "race": "Terr",
+        "score": 9
+      }, {
+        "name": "Ikkje bra",
+        "position": 2,
+        "race": "Terr",
+        "score": 6
+      }, {
+        "name": "Killers",
+        "position": 3,
+        "race": "Terr",
+        "score": 3
+      }, {
+        "name": "Jarheads",
+        "position": 4,
+        "race": "Terr",
         "score": 0
       }],
       [{
+        "name": "Liggeunderlaget",
         "position": 1,
-        "race": "Prot",
-        "name": "Team 1",
-        "score": 0
+        "race": "Terr",
+        "score": 6
       }, {
+        "name": "Hoegrinders",
         "position": 2,
-        "race": "Prot",
-        "name": "Team 2",
-        "score": 0
-      }, {
-        "position": 3,
-        "race": "Prot",
-        "name": "Team 3",
-        "score": 0
-      }, {
-        "position": 4,
-        "race": "Prot",
-        "name": "Team 4",
-        "score": 0
-      }],
-      [{
-        "position": 1,
-        "race": "Terr",
-        "name": "Team 1",
-        "score": 0
-      }, {
-        "position": 2,
-        "race": "Terr",
-        "name": "Team 2",
-        "score": 0
-      }, {
-        "position": 3,
-        "race": "Terr",
-        "name": "Team 3",
-        "score": 0
-      }, {
-        "position": 4,
-        "race": "Terr",
-        "name": "Team 4",
-        "score": 0
-      }],
-      [{
-        "position": 1,
         "race": "Zerg",
-        "name": "Winner Zerg",
-        "score": 0
+        "score": 3
       }, {
-        "position": 2,
-        "race": "Terr",
-        "name": "Winner Terran",
-        "score": 0
-      }, {
+        "name": "Carriers",
         "position": 3,
         "race": "Prot",
-        "name": "Winner Protoss",
         "score": 0
       }]
     ]
@@ -85,209 +85,209 @@
   "round2": {
     "teams": [
       [{
+        "name": "Gladiators",
         "position": 1,
         "race": "Zerg",
-        "name": "Team 1",
-        "score": 0
+        "score": 7
       }, {
+        "name": "Hoegrinders",
         "position": 2,
         "race": "Zerg",
-        "name": "Team 2",
-        "score": 0
+        "score": 4
       }, {
+        "name": "Feminine entopologer fra Raufoss",
         "position": 3,
         "race": "Zerg",
-        "name": "Team 3",
-        "score": 0
+        "score": 3
       }, {
+        "name": "Ekle insekter",
         "position": 4,
         "race": "Zerg",
-        "name": "Team 4",
         "score": 0
       }],
       [{
+        "name": "All your base are belong to us",
         "position": 1,
         "race": "Prot",
-        "name": "Team 1",
         "score": 0
       }, {
+        "name": "Big Daddies",
         "position": 2,
         "race": "Prot",
-        "name": "Team 2",
         "score": 0
       }, {
+        "name": "Carriers",
         "position": 3,
         "race": "Prot",
-        "name": "Team 3",
         "score": 0
       }, {
+        "name": "Do you have a cup of pylons?",
         "position": 4,
         "race": "Prot",
-        "name": "Team 4",
         "score": 0
       }],
       [{
+        "name": "Liggeunderlaget",
         "position": 1,
         "race": "Terr",
-        "name": "Team 1",
-        "score": 0
+        "score": 9
       }, {
+        "name": "Ikkje bra",
         "position": 2,
         "race": "Terr",
-        "name": "Team 2",
-        "score": 0
+        "score": 6
       }, {
+        "name": "Jarheads",
         "position": 3,
         "race": "Terr",
-        "name": "Team 3",
-        "score": 0
+        "score": 3
       }, {
+        "name": "Killers",
         "position": 4,
         "race": "Terr",
-        "name": "Team 4",
         "score": 0
       }],
       [{
+        "name": "Hoegrinders",
         "position": 1,
         "race": "Zerg",
-        "name": "Winner Zerg",
         "score": 0
       }, {
+        "name": "Liggeunderlaget",
         "position": 2,
         "race": "Terr",
-        "name": "Winner Terran",
         "score": 0
       }, {
-        "position": 3,
-        "race": "Prot",
         "name": "Winner Protoss",
+        "position": 3,
+        "race": "Prot",
         "score": 0
       }]
     ]
   },
   "final": {
     "teams": [{
+      "name": "Ekle insekter",
       "position": 1,
       "race": "Zerg",
-      "name": "Team 1",
       "score": 0
     }, {
+      "name": "Feminine entomologer fra Raufoss",
       "position": 2,
       "race": "Zerg",
-      "name": "Team 2",
       "score": 0
     }, {
+      "name": "Gladiators",
       "position": 3,
       "race": "Zerg",
-      "name": "Team 3",
       "score": 0
     }, {
+      "name": "Hoegrinders",
       "position": 4,
       "race": "Zerg",
-      "name": "Team 4",
       "score": 0
     }, {
+      "name": "All your base are belong to us",
       "position": 5,
       "race": "Prot",
-      "name": "Team 1",
       "score": 0
     }, {
+      "name": "Big Daddies",
       "position": 6,
       "race": "Prot",
-      "name": "Team 2",
       "score": 0
     }, {
+      "name": "Carriers",
       "position": 7,
       "race": "Prot",
-      "name": "Team 3",
       "score": 0
     }, {
+      "name": "Do you have a cup of pylons?",
       "position": 8,
       "race": "Prot",
-      "name": "Team 4",
       "score": 0
     }, {
+      "name": "Ikkje bra",
       "position": 9,
       "race": "Terr",
-      "name": "Team 1",
       "score": 0
     }, {
+      "name": "Jarheads",
       "position": 10,
       "race": "Terr",
-      "name": "Team 2",
       "score": 0
     }, {
+      "name": "Killers",
       "position": 11,
       "race": "Terr",
-      "name": "Team 3",
       "score": 0
     }, {
+      "name": "Liggeunderlaget",
       "position": 12,
       "race": "Terr",
-      "name": "Team 4",
       "score": 0
     }]
   },
   "total": {
     "teams": [{
+      "name": "Liggeunderlaget",
       "position": 1,
-      "race": "Zerg",
-      "name": "Team 1",
-      "score": 0
+      "race": "Terr",
+      "score": 4
     }, {
+      "name": "Ekle insekter",
       "position": 2,
       "race": "Zerg",
-      "name": "Team 2",
       "score": 0
     }, {
+      "name": "Feminine entomologer fra Raufoss",
       "position": 3,
       "race": "Zerg",
-      "name": "Team 3",
       "score": 0
     }, {
+      "name": "Gladiators",
       "position": 4,
       "race": "Zerg",
-      "name": "Team 4",
       "score": 0
     }, {
+      "name": "Hoegrinders",
       "position": 5,
-      "race": "Prot",
-      "name": "Team 1",
+      "race": "Zerg",
       "score": 0
     }, {
+      "name": "All your base are belong to us",
       "position": 6,
       "race": "Prot",
-      "name": "Team 2",
       "score": 0
     }, {
+      "name": "Big Daddies",
       "position": 7,
       "race": "Prot",
-      "name": "Team 3",
       "score": 0
     }, {
+      "name": "Carriers",
       "position": 8,
       "race": "Prot",
-      "name": "Team 4",
       "score": 0
     }, {
+      "name": "Do you have a cup of pylons?",
       "position": 9,
-      "race": "Terr",
-      "name": "Team 1",
+      "race": "Prot",
       "score": 0
     }, {
+      "name": "Ikkje bra",
       "position": 10,
       "race": "Terr",
-      "name": "Team 2",
       "score": 0
     }, {
+      "name": "Jarheads",
       "position": 11,
       "race": "Terr",
-      "name": "Team 3",
       "score": 0
     }, {
+      "name": "Killers",
       "position": 12,
       "race": "Terr",
-      "name": "Team 4",
       "score": 0
     }]
   }
